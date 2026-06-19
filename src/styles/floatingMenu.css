@@ -1,0 +1,75 @@
+.floating-menu {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+}
+
+.menu-toggle {
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 1.6rem;
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #f0a6c0,
+    #d6b3ff
+  );
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  transition: 0.3s;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+.menu-items {
+  position: absolute;
+
+  bottom: 75px;
+  right: 0;
+
+  width: 220px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 15px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #5a3045;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu-items a:hover {
+  background: #f8e7ef;
+}
+
+.menu-toggle {
+  transition: 0.3s;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}

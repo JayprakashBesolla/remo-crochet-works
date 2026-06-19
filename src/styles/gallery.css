@@ -1,0 +1,179 @@
+.gallery-section {
+  padding: 20px 8%;
+  background: #fff3f6;
+  text-align: center;
+}
+
+.gallery-tag {
+  color: #9a6b79;
+  margin-bottom: 10px;
+}
+
+.gallery-title {
+  font-size: 3rem;
+  color: #5f3a4b;
+  margin-bottom: 20px;
+}
+
+.gallery-description {
+  color: #7c5c69;
+  margin-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.gallery-card {
+  height: 280px;
+  overflow: hidden;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-title {
+    font-size: 2.2rem;
+  }
+
+  .gallery-card {
+    height: 240px;
+  }
+}
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.gallery-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.gallery-card:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery-card {
+  position: relative;
+}
+
+.gallery-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-blob {
+  position: absolute;
+  border-radius: 50%;
+
+  background: rgba(233, 169, 185, 0.35);
+
+  filter: blur(80px);
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  animation: floatGalleryBlob 8s ease-in-out infinite;
+}
+
+.gallery-grid,
+.gallery-title,
+.gallery-tag,
+.gallery-description {
+  position: relative;
+  z-index: 2;
+}
+
+.blob-left {
+  width: 220px;
+  height: 220px;
+
+  top: 80px;
+  left: -100px;
+}
+
+.blob-right {
+  width: 220px;
+  height: 220px;
+
+  bottom: 80px;
+  right: -100px;
+
+  animation-delay: 2s;
+}
+
+@keyframes floatGalleryBlob {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.gallery-card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 20px 40px rgba(233, 169, 185, 0.25);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-caption {
+  backdrop-filter: blur(5px);
+}

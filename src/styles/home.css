@@ -1,0 +1,354 @@
+/* =============================================
+   HERO SECTION
+   ============================================= */
+
+.hero {
+  position: relative;
+
+   min-height: calc(100vh - 55px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background: linear-gradient(
+    180deg,
+    #fff9fb,
+    #fdeff5
+  );
+}
+
+/* =============================================
+   HERO CONTENT
+   ============================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+
+  width: 90%;
+  max-width: 780px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+
+  transform: translateY(40px);
+}
+
+/* =============================================
+   TOP FLOWER
+   ============================================= */
+
+.top-border {
+  position: absolute;
+
+  top: -61px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 92%;
+  max-width: 1400px;
+
+  height: auto;
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* =============================================
+   CORNER FLOWER
+   ============================================= */
+
+.corner-flower {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 180px;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* =============================================
+   WELCOME
+   ============================================= */
+
+.welcome-text {
+  font-size: 1rem;
+
+  color: #b86b86;
+
+  margin-bottom: 15px;
+
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* =============================================
+   TITLE
+   ============================================= */
+
+.hero-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+
+  color: #3e252d;
+
+  line-height: 1;
+
+  margin-bottom: 16px;
+}
+
+.remo-text {
+  display: block;
+
+  font-family: "Great Vibes", cursive;
+
+  font-size: clamp(3.5rem, 7vw, 5.8rem);
+
+  color: #c82362;
+
+  margin-bottom: -10px;
+}
+
+/* =============================================
+   DESCRIPTION
+   ============================================= */
+
+.hero-description {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+
+  color: #8f5f73;
+
+  margin-bottom: 12px;
+
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero-story {
+  max-width: 620px;
+
+  color: #6b5a63;
+
+  line-height: 1.7;
+
+  font-size: 0.95rem;
+
+  margin-bottom: 10px;
+}
+
+/* =============================================
+   BUTTON
+   ============================================= */
+
+.hero-btn {
+  margin-top: 18px;
+
+  padding: 14px 34px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    #ef9fbd,
+    #d5a8ff
+  );
+
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 8px 20px rgba(239, 159, 189, 0.25);
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 25px rgba(239, 159, 189, 0.4);
+}
+
+/* =============================================
+   ORBS
+   ============================================= */
+
+.orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(255, 192, 203, 0.25);
+
+  filter: blur(4px);
+
+  animation: floatOrb 10s ease-in-out infinite;
+}
+
+.orb1 {
+  width: 90px;
+  height: 90px;
+  top: 40%;
+  left: 8%;
+}
+
+.orb2 {
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  right: 12%;
+}
+
+.orb3 {
+  width: 30px;
+  height: 30px;
+  top: 75%;
+  left: 25%;
+}
+
+.orb4 {
+  width: 20px;
+  height: 20px;
+  top: 60%;
+  right: 20%;
+}
+
+.orb5 {
+  width: 15px;
+  height: 15px;
+  top: 80%;
+  right: 15%;
+}
+
+.orb6 {
+  width: 40px;
+  height: 40px;
+  top: 35%;
+  right: 15%;
+}
+
+.orb7 {
+  width: 25px;
+  height: 25px;
+  top: 65%;
+  left: 15%;
+}
+
+.orb8 {
+  width: 18px;
+  height: 18px;
+  top: 85%;
+  left: 45%;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =============================================
+   TABLET
+   ============================================= */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+
+    padding: 70px 20px 40px;
+  }
+
+  .hero-content {
+    width: 92%;
+
+    transform: translateY(0);
+  }
+
+  .top-border {
+    width: 120%;
+    top: -10px;
+  }
+
+  .corner-flower {
+    width: 120px;
+  }
+
+  .hero-story {
+    max-width: 95%;
+  }
+}
+
+/* =============================================
+   MOBILE
+   ============================================= */
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+
+    padding: 50px 20px 30px;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    transform: translateY(0);
+  }
+
+  .welcome-text {
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .remo-text {
+    font-size: 4rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-story {
+    display: none;
+  }
+
+  .hero-btn {
+    width: 90%;
+    max-width: 260px;
+  }
+
+  .corner-flower {
+    width: 90px;
+  }
+
+  .top-border {
+    width: 140%;
+    top: 0;
+  }
+}
