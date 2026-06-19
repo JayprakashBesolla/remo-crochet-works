@@ -1,4 +1,4 @@
-import "../styles/about.css";
+import "../styles/About.css";
 import aboutHero from "../assets/about/about-hero.png";
 
 import { useEffect, useRef } from "react";
